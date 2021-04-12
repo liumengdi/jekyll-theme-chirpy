@@ -56,6 +56,15 @@
           https://github.com/{{ site.github.username }}
         {%- elsif entry.type == 'twitter' -%}
           https://twitter.com/{{ site.twitter.username }}
+
+
+        {%- elsif entry.type == 'GOVBENAN' -%}
+          http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ site.GOVBENAN }}
+
+        {%- elsif entry.type == 'ICP' -%}
+          https://beian.miit.gov.cn/#/Integrated/index{{ site.ICP }}
+
+
         {%- elsif entry.type == 'email' -%}
           {% assign email = site.social.email | split: '@' %}
           javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
